@@ -17,5 +17,9 @@ Route::get('/', function () {
 
 Route::get('about', function () {
     $thandodev = ['This', 'is', 'thandodev', 'world'];
-    return view('about', ['thandodev' => $thandodev]);
+
+    //return view('about', ['thandodev' => $thandodev]);
+    //return view('about')->with(['thandodev'=>$thandodev]);
+    //return view('about')->withThandodev($thandodev);
+    return view('about',compact($thandodev));
 });
