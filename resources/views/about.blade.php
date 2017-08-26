@@ -79,9 +79,14 @@
 
     <div class="content">
         <div class="title m-b-md">
-            <?php foreach ($thandodev as $thandod) : ?>
-                <?= $thandod; ?>
-            <?php endforeach ?>
+
+            @unless($thandodev)
+                There is no data
+            @endunless
+
+            @foreach ($thandodev as $thandod)
+                {{ $thandod }}
+            @endforeach
         </div>
 
         <div class="links">
