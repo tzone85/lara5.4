@@ -12,11 +12,15 @@ class PagesController extends Controller
      *
      * @return \Illuminate\Http\Response
      */
-    public function index()
+    public function welcome()
     {
-        //
+        return view('welcome');
     }
 
+    public function about()
+    {
+        return view('about');
+    }
     /**
      * Show the form for creating a new resource.
      *

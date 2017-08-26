@@ -11,15 +11,6 @@
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'PagesController@welcome');
 
-Route::get('about', function () {
-    $thandodev = ['This', 'is', 'thandodev', 'world'];
-
-    //return view('about', ['thandodev' => $thandodev]);
-    //return view('about')->with(['thandodev'=>$thandodev]);
-    //return view('about')->withThandodev($thandodev);
-    return view('about',compact($thandodev));
-});
+Route::get('about', 'PagesController@about');
