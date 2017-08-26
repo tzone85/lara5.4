@@ -14,3 +14,7 @@
 Route::get('/', 'PagesController@welcome');
 
 Route::get('about', 'PagesController@about');
+
+Route::get('songs', 'SongsController@index');
+Route::get('songs', 'SongsController@edit');
+Route::resource('songs', 'SongsController');
